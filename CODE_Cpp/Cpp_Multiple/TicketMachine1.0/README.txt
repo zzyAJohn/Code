@@ -1,0 +1,2 @@
+售票机
+TicketMachine.h是头文件

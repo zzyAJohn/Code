@@ -1,0 +1,36 @@
+package castle;
+
+import java.util.HashMap;
+
+public class Room {
+    private String description;
+    private HashMap<String, Room> exits = new HashMap<String, Room>();
+
+    public Room(String description) {
+        this.description = description;
+    }
+    
+    public void setExits(String dir, Room room) {
+        exits.put(dir,room);
+    }
+        
+    @Override
+    public String toString()
+    {
+        return description;
+    }
+
+    //获取相邻的房间
+    public String getExitDesc() {
+        StringBuffer sb = new StringBuffer();//StringBuffer可以不断修改的对象,String对象不能做修改，ret+每次会产生新的对象，系统开销很大
+        for(String dir : exits.keySet()) {
+            sb.append(dir);
+            sb.append(' ');
+        }
+        return sb.toString();
+    }
+
+    public Room getExits(String direction) {
+        return exits.get(direction);
+    }
+}

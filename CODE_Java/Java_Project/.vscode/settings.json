@@ -1,0 +1,9 @@
+{
+    "java.project.sourcePaths": [
+        "yeah/src",
+        "animal/src",
+        "fox_rabbit\\src",
+        "Genshin1.4\\src",
+        "kcb\\src"
+    ]
+}
