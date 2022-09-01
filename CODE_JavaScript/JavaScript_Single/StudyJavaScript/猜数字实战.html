@@ -1,0 +1,43 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>
+            阿囧学习JS
+        </title>
+
+        <script>
+
+            // 得到一个两数之间的随机整数
+            function getRandomInt(min, max) {
+                min = Math.ceil(min);
+                max = Math.floor(max);
+                return Math.floor(Math.random() * (max - min)) + min; //不含最大值，含最小值
+            }
+
+            var num = getRandomInt(1, 100);
+            var yourNum = prompt('请输入你猜的1-100的整数：');
+            while(num != yourNum) {
+                if (num < yourNum) {
+                    alert('数字大了！继续猜！');
+                }
+                else if (num > yourNum) {
+                    alert('数字小了！继续猜！');
+                }
+                yourNum = prompt('再猜！');
+            }
+            alert('猜对了！就是' + yourNum + '！');
+            
+        </script>
+        
+    </head>
+        
+    <body>
+        
+    </body>
+    
+
+</html>
