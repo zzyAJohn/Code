@@ -1,0 +1,40 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>
+            阿囧学习JS
+        </title>
+
+        <script>
+
+            //输入时间，输出与当前时间倒计时
+            function countDown(time) {
+                var nowTime = +new Date();
+                var inputTime = +new Date(time);
+                var times = (inputTime - nowTime) / 1000;  //倒计时总秒数
+                var s = parseInt(times % 60);  //秒
+                s = s < 10 ? '0' + s : s;
+                var m = parseInt(times / 60 % 60);  //分
+                m = m < 10 ? '0' + m : m;
+                var h = parseInt(times / 60 / 60 % 24);  //时
+                h = h < 10 ? '0' + h : h;
+                var d = parseInt(times / 60 / 60 / 24);  //天
+                d = d < 10 ? '0' + d : d;
+                return d + '天' + h + '小时' + m + '分钟' + s + '秒';
+            }
+            console.log(countDown('2022-10-1 00:00:00'));
+            
+        </script>
+        
+    </head>
+        
+    <body>
+        
+    </body>
+    
+
+</html>
