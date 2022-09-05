@@ -1,0 +1,53 @@
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale-1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <title>
+            阿囧学习JS
+        </title>
+
+        <script>
+            
+            var date = new Date();  //当前时间
+            var date1 = new Date(2020, 10, 1);  //11.1
+            var date2 = new Date('2020-10-1 8:8:8')  //10.1
+            console.log(date);
+            console.log(date1);
+            console.log(date2);
+
+            console.log(date.getMonth() + 1);
+
+            //今天是2022年9月4日星期日
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var dates = date.getDate();
+            var arr = ['星期日', '星期一', '星期二', '星期三', '星期四', '星期无', '星期六'];
+            var day = date.getDay();
+            console.log('今天是' + year + '年' + month + '月' + dates + '日' + arr[day]);
+
+            //获取当前时间
+            function getTime() {
+                var time = new Date();
+                var h = time.getHours();
+                h = h < 10 ? '0' + h : h;
+                var m = time.getMinutes();
+                m = m < 10 ? '0' + m : m;
+                var s = time.getSeconds();
+                s = s < 10 ? '0' + s : s;
+                return h + ':' + m + ':' + s;
+            }
+            console.log(getTime());
+            
+        </script>
+        
+    </head>
+        
+    <body>
+        
+    </body>
+    
+
+</html>
